@@ -1,7 +1,7 @@
 import style from './Items.module.css'
 import {
     IoCalendarNumber,
-    IoPersonAdd,
+    IoHelpCircle,
     IoMedal,
     IoChatboxEllipses
 } from "react-icons/io5";
@@ -25,7 +25,7 @@ const Items = () => {
                 </div>
                 <div className={style.Items_Content_Card}>
                     <div className={style.Curso_circulo}>
-                        <IoPersonAdd className={style.Curso_Icono} />
+                        <IoHelpCircle className={style.Curso_Icono} />
                     </div>
                     <h5>Ayuda</h5>
                 </div>

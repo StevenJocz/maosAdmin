@@ -4,7 +4,8 @@ import {
     IoBookmarkOutline,
     IoCloudDoneOutline,
     IoFolderOpenOutline,
-    IoChatboxEllipsesOutline
+    IoChatboxEllipsesOutline,
+    IoPersonOutline 
 } from "react-icons/io5";
 import style from './Curso.module.css'
 import { Anuncios } from './anuncios';
@@ -35,6 +36,10 @@ const Curso = () => {
                         Información general
                     </li>
                     <li className={style.Curso_Nav_Ul_Li}>
+                        <IoPersonOutline  className={style.Curso_Nav_Icono} />
+                        Instructor
+                    </li>
+                    <li className={style.Curso_Nav_Ul_Li}>
                         <IoCloudDoneOutline className={style.Curso_Nav_Icono} />
                         PDF's y Recursos
                     </li>
@@ -53,7 +58,7 @@ const Curso = () => {
                 </ul>
             </div>
             <div className={style.Curso_Content}>
-
+                <h1>Inglés A1: Introducción al Idioma</h1>
             </div>
             <div className={style.Curso_Recursos}>
                 <Anuncios />
