@@ -1,0 +1,38 @@
+.Anuncios {
+    width: 70%;
+    height: 40px;
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-octavo);
+    border-radius: 0.7em;
+    -webkit-border-radius: 0.7em;
+    -moz-border-radius: 0.7em;
+    -ms-border-radius: 0.7em;
+    -o-border-radius: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.Anuncios p {
+    font-size: 20px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-primario);
+}
+
+.Anuncios_Icono {
+    font-size: 20px;
+    color: var(--text-primario);
+}
+
+.Anuncios_P {
+    font-size: 16px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--text-primario);
+    margin: 10px 0;
+}

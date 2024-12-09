@@ -5,7 +5,7 @@ interface Prosp {
     pathNames: Route[]
 }
 
-function Routes({ pathNames }: Prosp) {
+function Navigator({ pathNames }: Prosp) {
     return (
         <ul>
             {pathNames.map(pathNames => (
@@ -15,4 +15,4 @@ function Routes({ pathNames }: Prosp) {
     )
 }
 
-export default Routes;
+export default Navigator;

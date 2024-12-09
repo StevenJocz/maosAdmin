@@ -15,9 +15,10 @@ const Button = ({ type, text }: Props) => {
             {type === 1 ? (
                 <button
                     className={styles.Primary}
-                    type="submit" >
+                    type="submit"
+                    >
                     {text}
-                    <IoArrowForward className={styles.Icono} />
+                    
                 </button>
             ) : (
                 <Link

@@ -21,7 +21,11 @@
     --bg-octavo: #D5E6E1; /* Más claro que terciario */
     --bg-noveno: #F0F6F3; /* Casi blanco, más claro que cuaternario */
     --bg-decimo: #FAFBFA; /* Blanco puro o un ligero gris suave */
-
+    --background-dark: #071513;
+    --background-dark-body:#1f2130;
+    --bg-undecimo: #3baa9b30;
+    --bg-undecimo-hover: #3baa9b26;
+    
     /* text */
     --text-primario: #ffffff; /* Texto principal (blanco) */
     --text-secundario: #16423C; /* Texto secundario */
@@ -33,8 +37,9 @@
     --text-octavo: #D5E6E1;
     --text-noveno: #F0F6F3;
     --text-decimo: #FAFBFA;
+    --text-undecimo: #8b99ab;
     --text-negro: #000;
-
+    --text-rojo: #c90000;
 
 
     /* border */
@@ -42,7 +47,7 @@
     --border-secundario: #6A9C89;
     --border-terciario: #C4DAD2;
     --border-cuaternario: #E9EFEC;
-    --border-quinto: #112F29;
+    --border-quinto: #112f291f;
     --border-sexto: #4E7B6F;
     --border-septimo: #A3C4BA;
     --border-octavo: #D5E6E1;
@@ -135,11 +140,17 @@
 }
 
 body {
-    background-color: var(--text-decimo);
+  background-color: var(--bg-noveno);
 }
 
 form {
   width: 100%;
+}
+.Formulario_Input_Doble {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .Formulario_Input {
@@ -149,6 +160,15 @@ form {
   gap: 5px; 
   margin-top: 10px;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.Formulario_Input .Icono {
+  position: absolute;
+  top: 42px;
+  right: 10px;
+  color: var(--bg-primario);
+  cursor: pointer;
 }
 
 .Formulario_Input label {
@@ -169,11 +189,33 @@ form {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border: 1px solid var(--btn-border-sexto);
+  color: var(--text-secundario);
+  font-weight: 600;
   outline: none;
 }
 
 .Formulario_Input  input::placeholder {
   color: var(--text-sexto);
   font-size: 17px; 
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.Formulario_Input_Error {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 5px;
+  color: var(--text-rojo);
+  font-size: 14px; 
+  font-weight: 400;
+  font-family: "Barlow Condensed", sans-serif;
+  
+}
+
+.Formulario_Input_Error_Login {
+  color: var(--text-rojo);
+  font-size: 14px; 
+  font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
 }

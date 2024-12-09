@@ -1,0 +1,50 @@
+.ModulosYTemas {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.ModulosYTemas li {
+    font-size: 18px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--text-undecimo);
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.ModulosYTemas_Modulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ModulosYTemas_Temas {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+.ModulosYTemas_Temas li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.TemaSeleccionado {
+    background-color: var(--bg-undecimo-hover);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.IconoAprobado {
+    color: #05b22a;
+}
