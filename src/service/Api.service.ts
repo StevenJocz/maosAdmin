@@ -2,8 +2,7 @@ import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
- const api = {
-
+const api = {
     // Método genérico para realizar cualquier tipo de solicitud HTTP
     request: async <T>(
         method: string,
@@ -26,7 +25,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
         const url = `${API_URL}/${path}`;
         const queryParams = new URLSearchParams(params).toString();
         const finalUrl = queryParams ? `${url}?${queryParams}` : url;
-        
+
         try {
             return await axios.get<T>(finalUrl, config);
         } catch (error) {

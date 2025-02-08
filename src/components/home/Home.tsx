@@ -4,6 +4,7 @@ import HomeNav from './Home.nav'
 import bg from '../../../public/svg/bg.svg'
 import linea from '../../../public/svg/svgLinea.svg'
 import Image from 'next/image'
+import { blurImagen } from '@/models'
 
 const Home = () => {
     return (
@@ -19,7 +20,7 @@ const Home = () => {
                 width={900}
                 height={900}
                 placeholder="blur" // Activa el efecto de desenfoque
-                blurDataURL="data:image/svg+xml;base64,..." // Agrega una URL de baja resolución
+                blurDataURL={blurImagen}
             />
             <Image
                 src={linea}
@@ -28,7 +29,7 @@ const Home = () => {
                 width={500}
                 height={400}
                 placeholder="blur" // Activa el efecto de desenfoque
-                blurDataURL="data:image/svg+xml;base64,..." // Agrega una URL de baja resolución
+                blurDataURL={blurImagen}
             />
         </section>
     )

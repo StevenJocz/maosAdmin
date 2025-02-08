@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import style from './Registro.module.css'
 import mao from '../../../../public/img/MaoDos.png'
-import { Routes } from '@/models'
+import { blurImagen, Routes } from '@/models'
 import Link from 'next/link'
 import Formulario from './Registro.formulario'
 const Registro = () => {
@@ -17,7 +17,7 @@ const Registro = () => {
                         width={500}
                         height={500}
                         placeholder="blur"
-                        blurDataURL="data:image/svg+xml;base64,..."
+                        blurDataURL={blurImagen}
                     />
                 </div>
                 <div className={style.Registro_Content_Formulario}>

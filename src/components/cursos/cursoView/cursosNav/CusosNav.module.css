@@ -17,9 +17,11 @@
 }
 
 .ModulosYTemas_Modulo {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
 }
 
 .ModulosYTemas_Temas {
@@ -29,22 +31,21 @@
 
 
 .ModulosYTemas_Temas li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
     align-items: center;
     gap: 5px;
     padding: 5px;
     margin: 5px;
+    border-bottom: 1px solid var(--border-secundarioClaro);
+    
 }
 
 .TemaSeleccionado {
-    background-color: var(--bg-undecimo-hover);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    color: var(--text-terciario);
+    font-weight: 600;
 }
 
 .IconoAprobado {
-    color: #05b22a;
+    color: var(--text-verde);
 }

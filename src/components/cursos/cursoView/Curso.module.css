@@ -4,6 +4,37 @@
     display: grid;
     min-height: 100%;
     grid-template-columns: 250px minmax(400px, 1100px) 300px;
+    overflow: hidden;
+}
+
+.Curso_Nav {
+    padding: 24px;
+    height: 89vh;
+    background-color: var(--background-dark);
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.Curso_Nav::-webkit-scrollbar {
+    width: 1px;
+}
+
+.Curso_Nav::-webkit-scrollbar-thumb {
+    background-color: var(--background-dark);
+}
+
+.Curso_Nav::-webkit-scrollbar-track {
+    background-color: #252b3600;
+}
+
+
+.Curso_Nav h4 {
+    font-size: 14px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--text-noveno);
 }
 
 .Curso_Nav_Ul {
@@ -25,42 +56,55 @@
     cursor: pointer;
 }
 
+.LiActivo {
+    color: var(--text-terciario);
+    font-weight: 600;
+}
+
 .Curso_Nav_Icono {
     margin-right: 10px;
 }
 
-.Curso_Nav {
-    padding: 24px;
+.Curso_Content {
+    height: 89vh;
+    padding: 20px 5%;
+    background-color: var(--background-dark-body);
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.Curso_Content::-webkit-scrollbar {
+    width: 1px;
+}
+
+.Curso_Content::-webkit-scrollbar-thumb {
     background-color: var(--background-dark);
 }
 
-.Curso_Nav h4 {
-    font-size: 14px;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    color: var(--text-noveno);
-}
-
-.Curso_Content {
-    background-color: var(--background-dark-body);
-}
-
-.Curso_Recursos {
-    padding: 24px;
-    background-color: var(--background-dark-body);
-}
-
-
-.Curso_Content {
-    width: 100%;
-    padding: 20px 5%;
+.Curso_Content::-webkit-scrollbar-track {
+    background-color: #252b3600;
 }
 
 .Curso_Content h1 {
-    font-size: 3em;
+    font-size: 2.2em;
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-style: normal;
     color: var(--text-noveno);
 }
+
+.Curso_Content_Header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Curso_Recursos {
+    height: 89vh;
+    padding: 24px;
+    background-color: var(--background-dark-body);
+}
+
+

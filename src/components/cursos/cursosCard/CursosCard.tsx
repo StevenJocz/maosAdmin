@@ -1,4 +1,4 @@
-import { Card, Routes } from "@/models";
+import { blurImagen, Card, Routes } from "@/models";
 import style from './CursosCard.module.css';
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const CursosCard: React.FC<Card> = ({ id, title, image }) => {
                     alt={title}
                     width={385}
                     height={200}
-                    placeholder="blur"
+                    placeholder={blurImagen}
                     blurDataURL="data:image/svg+xml;base64,..."
                 />
                 <h2 className={style.title}>{title}</h2>

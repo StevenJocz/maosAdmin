@@ -23,8 +23,13 @@
     --bg-decimo: #FAFBFA; /* Blanco puro o un ligero gris suave */
     --background-dark: #071513;
     --background-dark-body:#1f2130;
-    --bg-undecimo: #3baa9b30;
-    --bg-undecimo-hover: #3baa9b26;
+    --bg-undecimo: rgba(108, 117, 141, 0.6);
+    --bg-undecimo-hover: rgba(108, 117, 141, 0.305);
+    --bg-texto: #2b2b50aa;
+    --bg-texto-hover: #2b2b50;
+    --bg-verde:  #078f25;
+    --bg-negro: #00000072;
+    --bg-rojo: #c90000;
     
     /* text */
     --text-primario: #ffffff; /* Texto principal (blanco) */
@@ -40,11 +45,13 @@
     --text-undecimo: #8b99ab;
     --text-negro: #000;
     --text-rojo: #c90000;
+    --text-verde:  #05b22a;
 
 
     /* border */
     --border-primario: #16423C;
     --border-secundario: #6A9C89;
+    --border-secundarioClaro: #6a9c893d;
     --border-terciario: #C4DAD2;
     --border-cuaternario: #E9EFEC;
     --border-quinto: #112f291f;
@@ -53,6 +60,7 @@
     --border-octavo: #D5E6E1;
     --border-noveno: #F0F6F3;
     --border-decimo: #FAFBFA;
+    --border-claro: #fafbfa5f;
 
     /* box-shadow */
     --shadow-primario: 0px 4px 6px rgba(22, 66, 60, 0.3);
@@ -89,6 +97,8 @@
     --btn-bg-octavo: #D5E6E1;
     --btn-bg-noveno: #F0F6F3;
     --btn-bg-decimo: #FAFBFA;
+    --btn-bg-boton: #8884d8;
+    --btn-bg-quiz: #e09845;
 
     /* buttons - text */
     --btn-text-primario: #ffffff;
@@ -146,6 +156,7 @@ body {
 form {
   width: 100%;
 }
+
 .Formulario_Input_Doble {
   width: 100%;
   display: flex;
@@ -218,4 +229,63 @@ form {
   font-size: 14px; 
   font-weight: 400;
   font-family: "Barlow Condensed", sans-serif;
+}
+
+
+/* Estilo para el texto al lado del radio */
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--text-undecimo);
+  background-color: var(--bg-texto);
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  -moz-border-radius: 1.1rem;
+  -ms-border-radius: 1.1rem;
+  -o-border-radius: 1.1rem;
+  border: 1px solid var(--border-claro);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] + label:hover {
+  background-color: var(--bg-texto-hover); 
+}
+
+input[type="radio"]:checked + label {
+  color: var(--text-primario);
+  background-color: var( --bg-verde); 
+}
+
+.tox-tbtn{
+  width: 20px !important;
+  margin-right: 5px !important;
+}
+
+.tox-tbtn > .tox-icon  {
+  font-size: 10px;
+}
+
+.tox-edit-area__iframe {
+  width: 100% !important;
+  overflow: hidden;
+  overflow-y: none;
+}
+
+#tinymce img {
+  width: 100% !important;
+}
+
+/* .tox .tox-statusbar {
+    display: none !important;
+} */
+
+.tox .tox-statusbar__text-container,
+.tox-statusbar__resize-handle {
+  display: none !important;
 }

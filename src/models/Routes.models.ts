@@ -29,6 +29,10 @@ export  const Routes = {
         path: '/dashboard/admin',
         name: 'Panel Administrador',
     },
+    INSTRUCTOR: {
+        path: '/dashboard/instructor',
+        name: 'Panel Instructor',
+    },
     PRODUCTOS: {
         path: `${RUTA_PUBLICA}/paginas/productos`,
         name: 'Productos',

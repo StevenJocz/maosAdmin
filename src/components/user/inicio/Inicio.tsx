@@ -6,7 +6,7 @@ import maoDos from '../../../../public/img/MaoDos.png'
 import svg from '../../../../public/svg/stroke.svg'
 import Link from 'next/link';
 import Formulario from './Inicio.formulario';
-import { Routes } from '@/models';
+import { blurImagen, Routes } from '@/models';
 
 
 function Inicio() {
@@ -43,7 +43,7 @@ function Inicio() {
                 width={500}
                 height={500}
                 placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,..."
+                blurDataURL={blurImagen}
             />
             <Image
                 src={maoUno}
@@ -52,7 +52,7 @@ function Inicio() {
                 width={500}
                 height={500}
                 placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,..."
+                blurDataURL={blurImagen}
             />
             <Image
                 src={svg}
@@ -61,7 +61,7 @@ function Inicio() {
                 width={800}
                 height={800}
                 placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,..."
+                blurDataURL={blurImagen}
             />
         </div>
     )

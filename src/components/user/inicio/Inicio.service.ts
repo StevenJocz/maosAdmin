@@ -13,7 +13,7 @@ const loginHandler = async (credentials: any) => {
             const expirationDate = new Date(decodedToken.exp * 1000); // Convertir de segundos a milisegundos
 
             // Guardar el token en una cookie con la fecha de expiración
-            Cookies.set('token', response.data.token, { expires: expirationDate, path: '/' });
+            Cookies.set('gresptes', response.data.token, { expires: expirationDate, path: '/' });
         }
 
         return response;

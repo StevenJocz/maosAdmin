@@ -1,14 +1,14 @@
+import { jwtDecode } from 'jwt-decode';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { jwtDecode } from "jwt-decode";
 
 export function middleware(request: NextRequest) {
-   const cookie = request.cookies.get('token')?.value;
+   const token = request.cookies.get('gresptes')?.value; // Obtén el token desde las cookies
 
-   if (cookie) {
+   if (token) {
       try {
          // Decodificar el token
-         const decodedToken: any = jwtDecode(cookie);
+         const decodedToken: any = jwtDecode(token);
          const currentTime = Math.floor(Date.now() / 1000); // Tiempo actual en segundos
 
          // Verificar si el token está expirado
@@ -17,14 +17,16 @@ export function middleware(request: NextRequest) {
          }
 
          const userType = decodedToken.tipoUsuario;
-         console.log(userType);
 
          // Verificar acceso a rutas específicas
-         if (request.nextUrl.pathname  === '/dashboard/admin') {
-            if (userType !== '1') {
-               // Si no tiene permisos, redirigir al inicio
-               return NextResponse.redirect(new URL('/dashboard', request.url));
-            }
+         if (request.nextUrl.pathname === '/dashboard/admin' && userType !== '1') {
+            // Si no tiene permisos, redirigir al dashboard general
+            return NextResponse.redirect(new URL('/dashboard', request.url));
+         }
+
+         if (request.nextUrl.pathname === '/dashboard/instructor' && userType === '3' ) {
+            // Si no tiene permisos, redirigir al dashboard general
+            return NextResponse.redirect(new URL('/dashboard', request.url));
          }
 
          // Si el token es válido y el usuario intenta acceder a '/', redirigir al dashboard
@@ -32,15 +34,16 @@ export function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL('/dashboard', request.url));
          }
 
-         // Si el token es válido, permitir el acceso
+         // Permitir acceso a otras rutas
          return NextResponse.next();
       } catch (error) {
-         // Si la decodificación falla (token no válido), redirigir
+         // Si la decodificación falla (token no válido), redirigir al inicio
+         console.error('Error al decodificar el token:', error);
          return NextResponse.redirect(new URL('/', request.url));
       }
    } else {
-      // Si no hay token, redirigir al inicio
-      if (request.nextUrl.pathname !== '/') {
+      // Si no hay token y se intenta acceder a rutas protegidas, redirigir al inicio
+      if (!['/'].includes(request.nextUrl.pathname)) {
          return NextResponse.redirect(new URL('/', request.url));
       }
    }
@@ -50,5 +53,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-   matcher: ['/', '/dashboard:path*', '/dashboard/admin'], // Aplicar al inicio y al dashboard
+   matcher: ['/', '/dashboard/:path*'], // Aplica el middleware a la raíz y cualquier subruta de /dashboard
 };

@@ -57,35 +57,8 @@
 .Nav_Perfil {
     width: 20%;
     margin-right: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
 }
 
-.Nav_Perfil h2{
-    font-size: 18px;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--text-negro);
-}
-
-.Nav_Perfil h2{
-    font-size: 18px;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--text-negro);
-}
-
-.Nav_Perfil_Icono {
-    color: var(--text-negro);
-}
-
-.Nav_Perfil_Imagen {
-    width: 60px;
-}
 
 
 /* Tema Oscuro */
@@ -108,11 +81,4 @@
     color: var(--text-septimo); 
 }
 
-.Nav.dark .Nav_Perfil h2 {
-    color: var(--text-octavo);  /* Cambiar color del texto en el perfil */
-}
-
-.Nav.dark .Nav_Perfil_Icono {
-    color: var(--text-octavo);
-}
 

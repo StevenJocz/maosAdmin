@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import style from './Mao.module.css'
 import maoDos from '../../../public/img/MaoDos.png'
+import { blurImagen } from '@/models'
 
 const Mao = () => {
     return (
@@ -17,7 +18,7 @@ const Mao = () => {
                     width={130}
                     height={130}
                     placeholder="blur"
-                    blurDataURL="data:image/svg+xml;base64,..."
+                    blurDataURL={blurImagen}
                 />
             </div>
         </div>

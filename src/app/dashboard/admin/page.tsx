@@ -1,14 +1,10 @@
-import { Nav } from '@/components/nav'
+import { Admin } from '@/components/admin/home';
 import React from 'react'
 
-const Admin = () => {
-  const theme: 'dark' | 'light' = 'dark';
+const AdminPage = () => {
   return (
-    <> 
-     <Nav  theme={theme}/>
-    page Admin
-    </>
+    <Admin />
   )
 }
 
-export default Admin
+export default AdminPage

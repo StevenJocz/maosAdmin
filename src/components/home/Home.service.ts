@@ -9,7 +9,7 @@ export const fetchCursosCard = (): Card[] => {
         },
         {
             id: 2,
-            title: 'Inglés A1: Vocabulario y Frases Comunes',
+            title: 'Inglés A2: Expresiones y Conversaciones Cotidianas',
             image: 'https://edteam-media.s3.amazonaws.com/courses/big/12c8d71c-a714-454f-929c-8c39ae52fd81.png', // Ruta de la imagen
         },
 

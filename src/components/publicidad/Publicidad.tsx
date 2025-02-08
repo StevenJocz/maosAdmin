@@ -2,6 +2,7 @@ import style from './Publicidad.module.css'
 import mao from '../../../public/img/MaoDos.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { blurImagen } from '@/models'
 
 const Publicidad = () => {
     return (
@@ -24,7 +25,7 @@ const Publicidad = () => {
                 width={200}
                 height={200}
                 placeholder="blur"
-                blurDataURL="data:image/svg+xml;base64,..."
+                blurDataURL={blurImagen}
             />
         </div>
     )
